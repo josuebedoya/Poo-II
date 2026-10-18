@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Marker Labels</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!--
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      IMPORTANTE: reemplazar TU_API_KEY_DE_GOOGLE_MAPS por el mismo Key configurado en el backend (Geocoder.java)
+      -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY_DE_GOOGLE_MAPS&callback=initMap&libraries=places&v=weekly">
+    </script>
+  </body>
+</html>

@@ -10,7 +10,7 @@ import jakarta.persistence.Column;
 
 
 @Entity
-@Table(name = "Persona", schema = "PPOOII")
+@Table(name = "Persona", schema = "LABPOOII")
 public class Persona implements Serializable{
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,9 @@ public class Persona implements Serializable{
 
     @Column(name="Edad")
     private int Edad;
+
+    @Column(name="Ubicacion")
+    private String Ubicacion;
 
     public Persona () {}
 
@@ -63,8 +66,16 @@ public class Persona implements Serializable{
         Edad = edad;
     }
 
+    public String getUbicacion() {
+        return Ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        Ubicacion = ubicacion;
+    }
+
     @Override
     public String toString() {
-        return "Persona [id=" + this.Id + ", Primer Nombre=" + this.PNombre + ", Edad=" + this.Edad + "]";
+        return "Persona [id=" + this.Id + ", Primer Nombre=" + this.PNombre + ", Edad=" + this.Edad + ", Ubicacion=" + this.Ubicacion + "]";
     }
 }

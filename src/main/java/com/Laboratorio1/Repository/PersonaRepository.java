@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
@@ -24,5 +25,9 @@ public interface PersonaRepository extends JpaRepository<Persona, Serializable>,
     public abstract List<Persona> findByEdad(int edad);
 
     public abstract Page<Persona> findAll(Pageable pageable);
+
+    //PERSONAS CON UBICACION REGISTRADA (tarea programada Laboratorio 3)
+    @Query("SELECT p FROM Persona p WHERE p.Ubicacion IS NOT NULL")
+    public abstract List<Persona> getPersonas();
     
 }

@@ -1,10 +1,14 @@
-package com.example.Laboratorio1;
+package com.Laboratorio1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication
-public class Laboratorio1Application {
+@SpringBootApplication(exclude = {UserDetailsServiceAutoConfiguration.class})
+@EnableScheduling
+public class Laboratorio1Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Laboratorio1Application.class, args);
