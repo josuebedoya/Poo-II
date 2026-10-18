@@ -53,6 +53,13 @@
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
 
+		<!-- LECTURA DE ARCHIVOS EXCEL -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.4.1</version>
+		</dependency>
+
 		<!-- JSON WEB TOKEN -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
